@@ -458,17 +458,12 @@ html {
 
     @keyframes retype {
         from { max-width: 0; }
-        to { max-width: 100%; } /* Allow the text to take the full width */
-    }
-
-    @keyframes retype-contact {
-        from { max-width: 0; }
-        to { max-width: 100%; } /* Allow the text to take the full width */
+        to { max-width: 150px; } /* Allow the text to take the full width */
     }
 
     @keyframes retype-project {
         from { max-width: 0; }
-        to { max-width: 100%; } /* Allow the text to take the full width */
+        to { max-width: 150px; } /* Allow the text to take the full width */
     }
 
     
