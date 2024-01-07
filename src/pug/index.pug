@@ -1,0 +1,241 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title My Website Title
+    link(rel="stylesheet", href="css/main.css")
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  body
+    block content 
+        #navbar
+            div
+                span(class="material-symbols-outlined home-btn" id="menu-icon") home
+                span(class="material-symbols-outlined" id="menu-icon ex") chevron_left
+
+                #nav-content
+                    a(href="/about") About
+                    a(href="/projects") Projects
+                    a(href="assets/resume.png" target="_blank") Resume
+
+        #home
+            div
+                img(src="assets/headshot.png")
+                h1 Nice to meet you.
+                h3(id="project-switch")
+                    span(id="one") 1
+                    span(id="two") 2
+                    span(id="three") 3
+                    span(id="four") 4
+                
+                p As a technology intern at the Federal Reserve Bank of St. Louis, I contribute to the development and implementation of full-stack applications, working on a Scrum team with agile methodologies. I am also a senior computer science student at the University of Missouri-Columbia, where I have acquired a solid foundation in programming, data structures, algorithms, and software engineering principles. I am passionate about learning new technologies and solving problems creatively and effectively.
+        
+        #project-card
+            .card 
+                    div
+                        h2 DivArt
+                        p A is a CSS art project inspired by Lynn Fischer's "A Single Div", showcasing artworks created using only a single HTML div element. This project leverages the Pug templating engine and the Stylus CSS preprocessor, demonstrating advanced CSS techniques and the artistic potential of web development.
+
+
+    // js 
+    script.
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.getElementById('menu-icon ex');
+            const homeIcon = document.getElementById('menu-icon');
+            const navContent = document.getElementById('nav-content');
+
+            menuIcon.addEventListener('click', function() {
+                const isOpen = menuIcon.classList.contains('open');
+                menuIcon.innerText = isOpen ? 'chevron_left' : 'chevron_right';  // Toggle between 'menu' and 'close'
+                menuIcon.classList.toggle('open');
+                
+                const isMenuOpen = navContent.style.right === '0px';
+                navContent.style.right = isMenuOpen ? '-250px' : '0px';
+            });
+
+            const aboutLink = document.querySelector('#nav-content a[href="/about"]');
+            const contactLink = document.querySelector('#nav-content a[href="/contact"]');
+            const projectLink = document.querySelector('#nav-content a[href="/projects"]');
+            const image = document.querySelector('#home img');
+            const text = document.querySelector('#home h1');
+            const paragraph = document.querySelector('#home p');
+            const card = document.querySelector('#project-card');
+            const projectNums = document.querySelector('#project-switch');
+            const one = document.querySelector('#one');
+            const two = document.querySelector('#two');
+            const three = document.querySelector('#three');
+            const four = document.querySelector('#four');
+
+            aboutLink.addEventListener('click', function(e) {
+                e.preventDefault();  
+
+                // Move image and text upwards
+                text.style.display = 'none';
+                projectNums.style.display = 'none';
+                image.style.animation = 'move-up 1s forwards';
+                paragraph.style.animation = 'none';
+                card.style.display = 'none';
+                paragraph.textContent = 'As a technology intern at the Federal Reserve Bank of St. Louis, I contribute to the development and implementation of full-stack applications, working on a Scrum team with agile methodologies. I am also a senior computer science student at the University of Missouri-Columbia, where I have acquired a solid foundation in programming, data structures, algorithms, and software engineering principles. I am passionate about learning new technologies and solving problems creatively and effectively.';
+
+
+                // Set timeout to match the duration of the move-up animation
+                setTimeout(function() {
+                    text.style.display = 'block';
+                    // paragraph 
+                    paragraph.style.display = 'block';  // Changed from 'inline-flex' to 'block' for simplicity
+                    paragraph.style.opacity = '0';  // Reset opacity
+                    paragraph.style.marginTop = '-300px';
+
+                    paragraph.style.animation = 'fade-in 1s forwards';
+                    
+                    // Change text and apply retype animation
+                    text.textContent = 'About.';
+                    text.style.marginTop = '-700px';
+                    text.style.marginLeft = '175px';
+                    text.style.animation = 'typing 2s steps(20, end) forwards, retype 1s steps(15, end) forwards, blink-caret 1s step-end infinite 2s';
+
+                }, 1000); // 1000 ms matches the move-up animation duration
+            });
+
+            /*
+            contactLink.addEventListener('click', function(e) {
+                e.preventDefault();  // Prevent default link behavior
+
+                // Move text up as well
+                text.style.display = 'none';
+                projectNums.style.display = 'none';
+                image.style.animation = 'move-up 1s forwards';
+                paragraph.style.animation = 'none';
+                card.style.display = 'none';
+
+                // Set timeout to match the duration of the move-up animation
+                setTimeout(function() {
+                    text.style.display = 'block';
+                    // paragraph 
+                    paragraph.style.display = 'block';  // Changed from 'inline-flex' to 'block' for simplicity
+                    paragraph.style.opacity = '0';  // Reset opacity
+                    paragraph.style.animation = 'fade-in 1s forwards';
+                    paragraph.textContent = '';
+                    paragraph.style.marginTop = '-530px';
+
+                    // Create text nodes and <br> elements
+                    const emailText = document.createTextNode('aidanpuricelli@gmail.com');
+                    const usernameText = document.createTextNode('LinkedIn');
+                    const githubText = document.createTextNode('GitHub');
+
+                    // Append the text nodes and <br> elements
+                    paragraph.appendChild(emailText);
+                    paragraph.appendChild(document.createElement('br'));
+                    paragraph.appendChild(document.createElement('br'));
+                    paragraph.appendChild(usernameText);
+                    paragraph.appendChild(document.createElement('br'));
+                    paragraph.appendChild(document.createElement('br'));
+                    paragraph.appendChild(githubText);
+
+                    // Change text and apply retype animation
+                    text.textContent = 'Contact.';
+                    text.style.marginTop = '-700px';
+                    text.style.marginLeft = '165px';
+                    text.style.animation = 'typing 2s steps(20, end) forwards, retype-contact 1s steps(15, end) forwards, blink-caret 1s step-end infinite 2s';
+
+                }, 1000); // 1000 ms matches the move-up animation duration
+            });
+            */
+
+            homeIcon.addEventListener('click', function(e) {
+                projectNums.style.display = 'none';
+                location.reload();
+            });
+
+            projectLink.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                paragraph.style.display = 'none';
+                text.style.display = 'none';
+                text.style.animation = 'none';
+                image.style.animation = 'move-up 1s forwards';
+                paragraph.style.animation = 'none';
+                card.style.display = 'block';
+                card.style.animation = 'fade-in 1s forwards';
+                projectNums.style.display = 'block';
+                projectNums.style.animation = 'fade-in 1s forwards';
+
+                setTimeout(function() {
+                    // Change text and apply retype animation
+                    text.style.display = 'block';
+                    text.textContent = 'Projects.';
+                    text.style.marginTop = '-850px';
+                    text.style.marginLeft = '100px';
+                    text.style.animation = 'typing 2s steps(20, end) forwards, retype-project 1s steps(15, end) forwards, blink-caret 1s step-end infinite 2s';
+                }, 1000); // 1000 ms matches the move-up animation duration
+            });
+
+            one.addEventListener('click', function() {
+                // Change the title and paragraph of the card
+                var cardTitle = card.querySelector('h2');
+                var cardParagraph = card.querySelector('p');
+
+                one.style.color = 'rgb(222, 222, 222)';
+                two.style.color = 'rgb(168, 168, 168)';
+                three.style.color = 'rgb(168, 168, 168)';
+                four.style.color = 'rgb(168, 168, 168)';
+
+                // Update the content
+                cardTitle.textContent = 'DivArt';
+                cardParagraph.textContent = 'A is a CSS art project inspired by Lynn Fischer\'s "A Single Div", showcasing artworks created using only a single HTML div element. This project leverages the Pug templating engine and the Stylus CSS preprocessor, demonstrating advanced CSS techniques and the artistic potential of web development.';
+            });
+
+            two.addEventListener('click', function() {
+                // Change the title and paragraph of the card
+                var cardTitle = card.querySelector('h2');
+                var cardParagraph = card.querySelector('p');
+
+                two.style.color = 'rgb(222, 222, 222)';
+                one.style.color = 'rgb(168, 168, 168)';
+                three.style.color = 'rgb(168, 168, 168)';
+                four.style.color = 'rgb(168, 168, 168)';
+
+                // Update the content
+                cardTitle.textContent = 'VinylVault';
+                cardParagraph.textContent = 'A CRUD application designed for users to catalog and manage their collections. Developed with Angular for the frontend and Spring Boot (Maven) for the backend, this app provides a user-friendly interface for adding, viewing, updating, and deleting records in a personal vinyl database.';
+            });
+
+            three.addEventListener('click', function() {
+                // Change the title and paragraph of the card
+                var cardTitle = card.querySelector('h2');
+                var cardParagraph = card.querySelector('p');
+
+                three.style.color = 'rgb(222, 222, 222)';
+                one.style.color = 'rgb(168, 168, 168)';
+                two.style.color = 'rgb(168, 168, 168)';
+                four.style.color = 'rgb(168, 168, 168)';
+
+                // Update the content
+                cardTitle.textContent = 'MTG AI Card Generator';
+                cardParagraph.textContent = 'A Flask-based web application enhanced with the OpenAI API, enabling users to create custom Magic: The Gathering cards. This app allows users to input their card ideas, and it employs advanced AI to generate imaginative card text and attributes, producing a unique and visually appealing custom card.';
+            });
+
+            four.addEventListener('click', function() {
+                // Change the title and paragraph of the card
+                var cardTitle = card.querySelector('h2');
+                var cardParagraph = card.querySelector('p');
+
+                four.style.color = 'rgb(222, 222, 222)';
+                one.style.color = 'rgb(168, 168, 168)';
+                two.style.color = 'rgb(168, 168, 168)';
+                three.style.color = 'rgb(168, 168, 168)';
+
+                // Update the content
+                cardTitle.textContent = 'Original Video Game;';
+                cardParagraph.textContent = 'Original video game created in GameMaker Studio 2. All of the art, music, and game logic has been created by me.';
+            });
+
+        });
+
+
