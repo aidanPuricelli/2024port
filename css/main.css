@@ -450,27 +450,6 @@ html {
 
 @media screen and (max-width: 450px) {
     h1 {
-        /* Adjust font size for smaller screens if needed */
-        animation: typing 2s steps(20, end) forwards, blink-caret 1s step-end infinite 2s;
-    }
-
-    @keyframes typing {
-        from { max-width: 0 }
-        to { max-width: 260px; }
-    }
-
-    @keyframes retype {
-        from { max-width: 0 }
-        to { max-width: 110px; }
-    }
-
-    @keyframes retype-contact {
-        from { max-width: 0 }
-        to { max-width: 140px; }
-    }
-
-    @keyframes retype-project {
-        from { max-width: 0 }
-        to { max-width: 145px; }
+        font-size: 24px;
     }
 }
