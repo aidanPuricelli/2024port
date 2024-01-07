@@ -364,7 +364,7 @@ html {
   display: none;
   font-family: 'Roboto', sans-serif;
   justify-content: flex-start;
-  margin: 0px 0px 0px 30px;
+  margin: 0px 0px 0px 0px;
   margin-top: -300px;
   color: #dedede;
   width: 390px;
@@ -445,4 +445,32 @@ html {
   font-family: 'Roboto', sans-serif;
   height: 400px;
   border: solid 2px #838383;
+}
+
+
+@media screen and (max-width: 450px) {
+    h1 {
+        /* Adjust font size for smaller screens if needed */
+        animation: typing 2s steps(20, end) forwards, blink-caret 1s step-end infinite 2s;
+    }
+
+    @keyframes typing {
+        from { max-width: 0 }
+        to { max-width: 260px; }
+    }
+
+    @keyframes retype {
+        from { max-width: 0 }
+        to { max-width: 110px; }
+    }
+
+    @keyframes retype-contact {
+        from { max-width: 0 }
+        to { max-width: 140px; }
+    }
+
+    @keyframes retype-project {
+        from { max-width: 0 }
+        to { max-width: 145px; }
+    }
 }
