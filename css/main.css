@@ -149,6 +149,7 @@ html {
 #home div h1 {
   font-family: 'Roboto', sans-serif;
   display: inline-flex;
+  font-size: 32px;
   justify-content: flex-start;
   margin: 0px 0px 0px 30px;
   white-space: nowrap;
