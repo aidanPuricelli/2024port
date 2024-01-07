@@ -162,34 +162,34 @@ html {
 }
 @-moz-keyframes typing {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 245px;
+    width: 245px;
   }
 }
 @-webkit-keyframes typing {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 245px;
+    width: 245px;
   }
 }
 @-o-keyframes typing {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 245px;
+    width: 245px;
   }
 }
 @keyframes typing {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 245px;
+    width: 245px;
   }
 }
 @-moz-keyframes blink-caret {
@@ -266,98 +266,98 @@ html {
 }
 @-moz-keyframes retype {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 90px;
+    width: 90px;
   }
 }
 @-webkit-keyframes retype {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 90px;
+    width: 90px;
   }
 }
 @-o-keyframes retype {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 90px;
+    width: 90px;
   }
 }
 @keyframes retype {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 90px;
+    width: 90px;
   }
 }
 @-moz-keyframes retype-contact {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 120px;
+    width: 120px;
   }
 }
 @-webkit-keyframes retype-contact {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 120px;
+    width: 120px;
   }
 }
 @-o-keyframes retype-contact {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 120px;
+    width: 120px;
   }
 }
 @keyframes retype-contact {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 120px;
+    width: 120px;
   }
 }
 @-moz-keyframes retype-project {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 125px;
+    width: 125px;
   }
 }
 @-webkit-keyframes retype-project {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 125px;
+    width: 125px;
   }
 }
 @-o-keyframes retype-project {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 125px;
+    width: 125px;
   }
 }
 @keyframes retype-project {
   from {
-    max-width: 0;
+    width: 0;
   }
   to {
-    max-width: 125px;
+    width: 125px;
   }
 }
 #home div p {
@@ -367,7 +367,7 @@ html {
   margin: 0px 0px 0px 0px;
   margin-top: -300px;
   color: #dedede;
-  width: 390px;
+  width: 380px;
   font-size: 20px;
   line-height: 30px;
   opacity: 0;
@@ -445,11 +445,4 @@ html {
   font-family: 'Roboto', sans-serif;
   height: 400px;
   border: solid 2px #838383;
-}
-
-
-@media screen and (max-width: 450px) {
-    h1 {
-        font-size: 20px;
-    }
 }
