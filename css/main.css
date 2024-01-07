@@ -453,7 +453,7 @@ html {
 
     @keyframes typing {
         from { max-width: 0; }
-        to { max-width: 260px; } /* Allow the text to take the full width */
+        to { max-width: 275px; } /* Allow the text to take the full width */
     }
 
     @keyframes retype {
