@@ -29,11 +29,11 @@
       <div class="card"> 
         <div>
           <h2>DivArt</h2>
-          <p>A is a CSS art project inspired by Lynn Fischer's "A Single Div", showcasing artworks created using only a single HTML div element. This project leverages the Pug templating engine and the Stylus CSS preprocessor, demonstrating advanced CSS techniques and the artistic potential of web development.</p>
+          <p>A is a CSS art project inspired by Lynn Fischer's "A Single Div", showcasing artworks created using only a single HTML div element. This project leverages the Pug templating engine and the Stylus CSS preprocessor, demonstrating advanced CSS techniques and the artistic potential of web development.</p><a href="https://github.com/aidanPuricelli/div-to-art" id="project-link"><img src="assets/github.png"></a>
         </div>
       </div>
     </div>
-    <div id="project-overlay"> <img src="assets/divart.png" id="project-image"></div>
+    <div id="project-overlay"> <img src="assets/code.png" id="project-image"></div>
     <!-- js -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -62,7 +62,8 @@
           const two = document.querySelector('#two');
           const three = document.querySelector('#three');
           const four = document.querySelector('#four');
-          const projectImg = document.querySelector('#project-image')
+          const projectImg = document.querySelector('#project-image');
+          const projectPage = document.querySelector('#project-link');
       
           aboutLink.addEventListener('click', function(e) {
               e.preventDefault();  
@@ -151,6 +152,7 @@
           projectLink.addEventListener('click', function(e) {
               e.preventDefault();
       
+              projectImg.src = 'assets/divart.png';
               projectImg.style.animation = 'fade-in-proj 2s forwards';
       
               paragraph.style.display = 'none';
@@ -184,6 +186,7 @@
               four.style.color = 'rgb(168, 168, 168)';
       
               projectImg.src = 'assets/divart.png';
+              projectPage.href = 'https://github.com/aidanPuricelli/div-to-art';
       
               // Update the content
               cardTitle.textContent = 'DivArt';
@@ -201,6 +204,7 @@
               four.style.color = 'rgb(168, 168, 168)';
       
               projectImg.src = 'assets/vinylvault.png';
+              projectPage.href = 'https://github.com/aidanPuricelli/vinyl-vault-app';
       
               // Update the content
               cardTitle.textContent = 'VinylVault';
@@ -213,6 +217,7 @@
               var cardParagraph = card.querySelector('p');
       
               projectImg.src = 'assets/magic.png';
+              projectPage.href = 'https://github.com/aidanPuricelli?tab=repositories';
       
               three.style.color = 'rgb(222, 222, 222)';
               one.style.color = 'rgb(168, 168, 168)';
@@ -230,6 +235,7 @@
               var cardParagraph = card.querySelector('p');
       
               projectImg.src = 'assets/videoGame.png';
+              projectPage.href = 'https://github.com/aidanPuricelli?tab=repositories';
       
               four.style.color = 'rgb(222, 222, 222)';
               one.style.color = 'rgb(168, 168, 168)';
