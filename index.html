@@ -29,10 +29,11 @@
       <div class="card"> 
         <div>
           <h2>DivArt</h2>
-          <p>A CSS art project inspired by Lynn Fischer's "A Single Div", showcasing artworks created using only a single HTML div element. This project leverages the Pug templating engine and the Stylus CSS preprocessor, demonstrating advanced CSS techniques and the artistic potential of web development.</p>
+          <p>A is a CSS art project inspired by Lynn Fischer's "A Single Div", showcasing artworks created using only a single HTML div element. This project leverages the Pug templating engine and the Stylus CSS preprocessor, demonstrating advanced CSS techniques and the artistic potential of web development.</p>
         </div>
       </div>
     </div>
+    <div id="project-overlay"> <img src="assets/divart.png" id="project-image"></div>
     <!-- js -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -61,9 +62,13 @@
           const two = document.querySelector('#two');
           const three = document.querySelector('#three');
           const four = document.querySelector('#four');
+          const projectImg = document.querySelector('#project-image')
       
           aboutLink.addEventListener('click', function(e) {
               e.preventDefault();  
+      
+              projectImg.style.animation = 'none';
+              projectImg.style.opacity = '0';
       
               // Move image and text upwards
               text.style.display = 'none';
@@ -146,6 +151,8 @@
           projectLink.addEventListener('click', function(e) {
               e.preventDefault();
       
+              projectImg.style.animation = 'fade-in-proj 2s forwards';
+      
               paragraph.style.display = 'none';
               text.style.display = 'none';
               text.style.animation = 'none';
@@ -161,7 +168,7 @@
                   text.style.display = 'block';
                   text.textContent = 'Projects.';
                   text.style.marginTop = '-850px';
-                  text.style.marginLeft = '100px';
+                  text.style.marginLeft = '90px';
                   text.style.animation = 'typing 2s steps(20, end) forwards, retype-project 1s steps(15, end) forwards, blink-caret 1s step-end infinite 2s';
               }, 1000); // 1000 ms matches the move-up animation duration
           });
@@ -176,9 +183,11 @@
               three.style.color = 'rgb(168, 168, 168)';
               four.style.color = 'rgb(168, 168, 168)';
       
+              projectImg.src = 'assets/divart.png';
+      
               // Update the content
               cardTitle.textContent = 'DivArt';
-              cardParagraph.textContent = 'A CSS art project inspired by Lynn Fischer\'s "A Single Div", showcasing artworks created using only a single HTML div element. This project leverages the Pug templating engine and the Stylus CSS preprocessor, demonstrating advanced CSS techniques and the artistic potential of web development.';
+              cardParagraph.textContent = 'A is a CSS art project inspired by Lynn Fischer\'s "A Single Div", showcasing artworks created using only a single HTML div element. This project leverages the Pug templating engine and the Stylus CSS preprocessor, demonstrating advanced CSS techniques and the artistic potential of web development.';
           });
       
           two.addEventListener('click', function() {
@@ -191,6 +200,8 @@
               three.style.color = 'rgb(168, 168, 168)';
               four.style.color = 'rgb(168, 168, 168)';
       
+              projectImg.src = 'assets/vinylvault.png';
+      
               // Update the content
               cardTitle.textContent = 'VinylVault';
               cardParagraph.textContent = 'A CRUD application designed for users to catalog and manage their collections. Developed with Angular for the frontend and Spring Boot (Maven) for the backend, this app provides a user-friendly interface for adding, viewing, updating, and deleting records in a personal vinyl database.';
@@ -200,6 +211,8 @@
               // Change the title and paragraph of the card
               var cardTitle = card.querySelector('h2');
               var cardParagraph = card.querySelector('p');
+      
+              projectImg.src = 'assets/magic.png';
       
               three.style.color = 'rgb(222, 222, 222)';
               one.style.color = 'rgb(168, 168, 168)';
@@ -215,6 +228,8 @@
               // Change the title and paragraph of the card
               var cardTitle = card.querySelector('h2');
               var cardParagraph = card.querySelector('p');
+      
+              projectImg.src = 'assets/videoGame.png';
       
               four.style.color = 'rgb(222, 222, 222)';
               one.style.color = 'rgb(168, 168, 168)';
