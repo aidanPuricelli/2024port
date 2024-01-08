@@ -28,6 +28,7 @@ html {
 }
 #navbar div .home-btn {
   left: 0px;
+  width: 40px;
 }
 #navbar div #nav-content {
   position: fixed;
