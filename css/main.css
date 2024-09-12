@@ -45,14 +45,16 @@
   margin: 100px auto;
   color: var(--my-grey);
 }
-#big-btn p {
-  padding: 12px 0;
+#big-btn a {
+  padding: 12px 10px;
   border: solid 2px var(--my-grey);
   width: 200px;
   margin: auto;
   transition: 0.2s;
+  color: var(--my-grey);
+  text-decoration: none;
 }
-#big-btn p:hover {
+#big-btn a:hover {
   border-radius: 10px;
   transition: 0.2s;
 }
