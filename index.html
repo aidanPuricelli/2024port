@@ -4,73 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aidan Puricelli</title>
-    <link rel="stylesheet" href="css/main.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-<script src="cursor.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Exo+2:ital,wght@0,100..900;1,100..900&amp;family=Rajdhani:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Syne+Mono&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
   </head>
   <body>
-    <div id="inverted-cursor"></div>
-    <div id="home">
-      <div id="navbar"><a href="#">HOME</a><a href="#portfolio">PORTFOLIO</a><a href="#about">ABOUT</a><span id="toggle-mode" class="material-symbols-outlined">light_mode</span>
-<span id="play-btn" class="material-symbols-outlined">play_arrow</span>
-      </div>
-      <div id="name">
-        <h1>Aidan Puricelli</h1>
-        <p>Hi, I am a full-stack software engineer based in St. Louis.</p><span class="material-symbols-outlined">code</span>
-      </div>
-      <div id="big-btn"><a href="#portfolio">VIEW MY PORTFOLIO</a></div>
-    </div>
-    <div id="about">
-      <div id="left">
-        <h1>About Me...</h1>
-        <p>Hi, I’m Aidan, a software engineer at the Federal Reserve Bank of St. Louis. I’m passionate about building and developing, whether it’s writing code for web applications or creating video games. Outside of work, I enjoy playing guitar and piano, or working on side projects.</p>
-        <p>I'm passionate about learning new technologies and finding creative, effective solutions to problems.</p>
-      </div>
-      <div id="right"><span class="fab fa-github"></span>
-<span class="fab fa-html5"></span>
-<span class="fab fa-css3-alt"></span>
-<span class="fab fa-js"></span>
-<span class="fa-brands fa-java"></span>
-<span class="fa-brands fa-angular"></span>
-<span class="fa-brands fa-python"></span>
-<span class="fa-brands fa-docker"></span>
-<span class="fa-brands fa-bitbucket"></span>
-<span class="fab fa-jira"></span>
-      </div>
-    </div>
-    <div id="portfolio">
-      <h1>Portfolio</h1>
-      <div id="project-cards">
-        <div class="card">
-          <h1>VinylVault</h1>
-          <p>A CRUD application designed for users to catalog and manage their collections. Developed with Angular for the frontend and Spring Boot (Maven) for the backend, this app provides a user-friendly interface for adding, viewing, updating, and deleting records in a personal vinyl database.</p>
-          <p class="skills">Frameworks/Languages: Angular, SpringBoot, MySQL</p><span class="fab fa-github"></span>
+    <div class="background"></div>
+    <div class="main-container">
+      <div class="about"> 
+        <div class="left">
+          <div class="my-info animate__animated animate__fadeInUp">
+            <h1>About Me</h1>
+            <p>I’m a <b class="emphasize expand">full-stack developer</b> at the Federal Reserve Bank of St. Louis, focused on building <b class="emphasize">efficient</b> and <b class="emphasize">user-friendly</b> web applications. I’m always interested in exploring new technologies and enjoy working on personal projects in my free time. Coding is both my job and my favorite way to stay <b class="emphasize">creative</b>.</p>
+          </div>
+          <div class="experience animate__animated animate__fadeInUp">
+            <h1>Experience</h1>
+            <div class="job"> 
+              <h2>Software Developer</h2>
+              <p><i>Federal Reserve Bank of St. Louis, Aug 2024 - Present</i></p>
+              <p>Development of full-stack web applications in collaboration with a Scrum team, enhancing skills in agile methodologies and cross-functional teamwork. Proficiency in efficiency and high-quality code.</p>
+            </div>
+            <div class="job"> 
+              <h2>Technology Intern</h2>
+              <p><i>Federal Reserve Bank of St. Louis, May 2024 - Aug 2024</i></p>
+              <p>Continued developing full-stack web applications. Gained valuable experience with GitLab, including managing CI/CD pipelines, and worked with AWS cloud services to deploy and manage scalable applications.</p>
+            </div>
+            <div class="job"> 
+              <h2>Technology Intern</h2>
+              <p><i>Federal Reserve Bank of St. Louis, May 2023 - May 2024</i></p>
+              <p>Built full-stack web applications as part of a Scrum team, gaining hands-on experience in agile development and collaborative project work. Extended internship to take on test automation responsibilities, developing proficiency in Cucumber and Selenium to enhance software quality and testing efficiency.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h1>DivArt</h1>
-          <p>A CSS art project inspired by Lynn Fischer's "A Single Div", showcasing artworks created using only a single HTML div element. This project leverages the Pug templating engine and the Stylus CSS preprocessor, demonstrating advanced CSS techniques and the artistic potential of web development.</p>
-          <p class="skills">Frameworks/Languages: Pug, Stylus</p><span class="fab fa-github"></span>
-        </div>
-        <div class="card">
-          <h1>MTG AI Card Generator</h1>
-          <p>A Flask-based web application enhanced with the OpenAI API, enabling users to create custom Magic: The Gathering cards. This app allows users to input their card ideas, and it employs advanced AI to generate imaginative card text and attributes, producing a unique and visually appealing custom card.</p>
-          <p class="skills">Frameworks/Languages: Flask, Python</p><span class="fab fa-github"></span>
-        </div>
-        <div class="card">
-          <h1>Original Video Game</h1>
-          <p>Original video game created in GameMaker Studio 2. All of the art, music, and game logic has been created by me.</p>
-          <p class="skills">Frameworks/Languages: Gamemaker Studio 2</p><span class="fab fa-github"></span>
+        <div class="right">
+          <div class="skills animate__animated animate__fadeInUp">
+            <h1>Skills</h1>
+            <div class="skills-grid"><img src="assets/skill-logos/html.png" alt="Logo 1"><img src="assets/skill-logos/css.png" alt="Logo 2"><img src="assets/skill-logos/javascript.png" alt="Logo 3"><img src="assets/skill-logos/angular.png" alt="Logo 4"><img src="assets/skill-logos/spring.png" alt="Logo 5"><img src="assets/skill-logos/c.png" alt="Logo 6"><img src="assets/skill-logos/sql.png" alt="Logo 7"><img src="assets/skill-logos/selenium.png" alt="Logo 8"><img src="assets/skill-logos/cucumber.png" alt="Logo 9"><img src="assets/skill-logos/java.png" alt="Logo 10"><img src="assets/skill-logos/bitbuckdt.png" alt="Logo 11"><img src="assets/skill-logos/jira.png" alt="Logo 12"><img src="assets/skill-logos/pug.png" alt="Logo 13"><img src="assets/skill-logos/styl.png" alt="Logo 14"><img src="assets/skill-logos/python.png" alt="Logo 15"><img src="assets/skill-logos/typescript.png" alt="Logo 16"><img src="assets/skill-logos/git.png" alt="Logo 17"><img src="assets/skill-logos/github.png" alt="Logo 18"><img src="assets/skill-logos/gitlab.png" alt="Logo 19"></div>
+          </div>
+          <div class="portfolio animate__animated animate__fadeInUp">
+            <h1>Projects</h1>
+            <div class="arrows">
+               <span class="material-symbols-outlined">arrow_back</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+            </div>
+            <div class="project" id="vinyl-vault">
+              <h2>VinylVault </h2>
+              <p>A CRUD application designed for users to catalog and manage their collections. Developed with Angular for the frontend and Spring Boot (Maven) for the backend, this app provides a user-friendly interface for adding, viewing, updating, and deleting records in a personal vinyl database.</p><a href="https://github.com/aidanPuricelli/vinyl-vault-app"> Check out the code <span class="material-symbols-outlined">open_in_new</span></a>
+            </div>
+            <div class="project" id="mtg-ai">
+              <h2>MTG Card Generator </h2>
+              <p>A Flask-based web application enhanced with the OpenAI API, enabling users to create custom Magic: The Gathering cards. This app allows users to input their card ideas, and it employs advanced AI to generate imaginative card text and attributes, producing a unique and visually appealing custom card.</p><a href="https://github.com/aidanPuricelli/magicCardAI/tree/main"> Check out the code <span class="material-symbols-outlined">open_in_new</span></a>
+            </div>
+            <div class="project" id="div-art">
+              <h2>DivArt </h2>
+              <p>A CSS art project inspired by Lynn Fischer's "A Single Div", showcasing artworks created using only a single HTML div element. This project leverages the Pug templating engine and the Stylus CSS preprocessor, demonstrating advanced CSS techniques and the artistic potential of web development.</p><a href="https://github.com/aidanPuricelli/div-to-art"> Check out the code <span class="material-symbols-outlined">open_in_new</span></a>
+            </div>
+          </div>
+          <div class="websites animate__animated animate__fadeInUp">
+            <h1>Websites</h1>
+            <div class="website"><a href="https://www.mizzouelectricracing.com/home">mizzouelectricracing.com </a>
+              <p><i>Website for Mizzou Electric Racing.</i></p>
+            </div>
+            <div class="bottom-website">
+              <div class="website"><a href="https://aidanpuricelli.github.io">aidanpuricelli.com  </a>
+                <p><i>My portfolio website.</i> </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div id="footer">
-      <div id="right-footer"><span class="fa-brands fa-linkedin"></span>
-<span class="fab fa-github"></span>
+    <div class="title">
+      <div class="name-job">
+        <h1>AIDAN PURICELLI</h1>
+        <p>Software Developer</p>
       </div>
+      <div class="mode"><span class="material-symbols-outlined">light_mode</span></div>
     </div>
-    <script src="script.js"></script>
+    <div class="footer">
+       <a href="https://github.com/aidanPuricelli"><img src="assets/skill-logos/github.png"></a>
+<a href="https://www.linkedin.com/in/aidan-puricelli-504b80250/"><img src="assets/skill-logos/linkedin.png"></a>
+    </div>
+    <script src="js/project.js"></script>
+    <script src="js/mode.js"></script>
   </body>
 </html>
